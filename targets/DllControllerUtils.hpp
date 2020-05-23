@@ -10,21 +10,10 @@ struct DllControllerUtils
     // Prioritize down and left for keyboard only.
     static uint16_t filterSimulDirState ( uint16_t state, bool isKeyboard )
     {
-        if ( isKeyboard )
-        {
-            if ( ( state & ( BIT_UP | BIT_DOWN ) ) == ( BIT_UP | BIT_DOWN ) )
-                state &= ~BIT_UP;
-            if ( ( state & ( BIT_LEFT | BIT_RIGHT ) ) == ( BIT_LEFT | BIT_RIGHT ) )
-                state &= ~BIT_RIGHT;
-        }
-        else
-        {
-            if ( ( state & ( BIT_UP | BIT_DOWN ) ) == ( BIT_UP | BIT_DOWN ) )
-                state &= ~ ( BIT_UP | BIT_DOWN );
-            if ( ( state & ( BIT_LEFT | BIT_RIGHT ) ) == ( BIT_LEFT | BIT_RIGHT ) )
-                state &= ~ ( BIT_LEFT | BIT_RIGHT );
-        }
-
+        if ( ( state & ( BIT_UP | BIT_DOWN ) ) == ( BIT_UP | BIT_DOWN ) )
+            state &= ~BIT_DOWN;
+        if ( ( state & ( BIT_LEFT | BIT_RIGHT ) ) == ( BIT_LEFT | BIT_RIGHT ) )
+            state &= ~( BIT_LEFT | BIT_RIGHT );
         return state;
     }
 
