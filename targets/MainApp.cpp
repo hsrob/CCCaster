@@ -1,3 +1,6 @@
+#include <winsock2.h>
+#include <ws2tcpip.h>
+
 #include "Main.hpp"
 #include "MainUi.hpp"
 #include "Pinger.hpp"
@@ -11,8 +14,6 @@
 #include "SpectatorManager.hpp"
 #include "NetplayStates.hpp"
 
-#include <windows.h>
-#include <ws2tcpip.h>
 
 using namespace std;
 

@@ -1,12 +1,11 @@
+#include <winsock2.h>
+#include <mmsystem.h>
+
 #include "EventManager.hpp"
 #include "TimerManager.hpp"
 #include "SocketManager.hpp"
 #include "ControllerManager.hpp"
 #include "Logger.hpp"
-
-#include <winsock2.h>
-#include <windows.h>
-#include <mmsystem.h>
 
 using namespace std;
 

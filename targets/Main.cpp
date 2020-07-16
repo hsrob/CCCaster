@@ -11,6 +11,7 @@
 #include <algorithm>
 #include <fstream>
 #include <iterator>
+#include <csignal>
 
 using namespace std;
 using namespace option;

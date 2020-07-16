@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <climits>
 #include <iostream>
 
 #include "Controller.hpp"

@@ -1,5 +1,14 @@
 #ifndef RELEASE
 
+// Hack to allow fdopen
+#ifdef __STRICT_ANSI__
+#undef __STRICT_ANSI__
+#include <cstdio>
+#define __STRICT_ANSI__
+#else
+#include <cstdio>
+#endif
+
 #include <gtest/gtest.h>
 
 using namespace std;

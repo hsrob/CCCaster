@@ -1,3 +1,6 @@
+#include <winsock2.h>
+#include <ws2tcpip.h>
+
 #include "SocketManager.hpp"
 #include "Socket.hpp"
 #include "TcpSocket.hpp"
@@ -6,9 +9,6 @@
 #include "Exceptions.hpp"
 #include "ErrorStrings.hpp"
 
-#include <winsock2.h>
-#include <windows.h>
-#include <ws2tcpip.h>
 
 #include <cereal/types/unordered_map.hpp>
 
